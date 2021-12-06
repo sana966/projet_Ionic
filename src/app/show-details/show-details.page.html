@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>ShowDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card *ngFor="let user of displayUser" color="light">
+    <ion-item>
+  <ion-avatar class="profile-pic">
+    <img src="https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.25&pid=1.7">
+  </ion-avatar>
+</ion-item>
+
+    <ion-card-header>
+      <ion-card-title class="name">{{user.first_name}} {{user.last_name}}</ion-card-title>
+    </ion-card-header>
+    <br>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Mobile 1  : {{user.phone1}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Mobile 2 : {{user.phone2}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

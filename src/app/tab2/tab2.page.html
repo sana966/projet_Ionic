@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Favorites
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let fav of favorites">
+    <ion-item >
+      <ion-thumbnail slot="start"><img src= "https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.25&pid=1.7"></ion-thumbnail>
+      <ion-label>
+        <h2>{{fav.first_name}} {{fav.last_name}}</h2>
+        <p>{{fav.phone1}}</p>
+        <p>{{fav.phone2}}</p>
+      </ion-label>
+  </ion-item>
+  </ion-list>
+  <h2>Amis</h2>
+  <ion-list *ngFor="let amis of contactListAmis">
+    <ion-item >
+      <ion-thumbnail slot="start"><img src= "https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.25&pid=1.7"></ion-thumbnail>
+      <ion-label>
+        <h2>{{amis.first_name}} {{amis.last_name}}</h2>
+        <p>{{amis.phone1}}</p>
+        <p>{{amis.phone2}}</p>
+      </ion-label>
+  </ion-item>
+  </ion-list>
+
+  <h2>Famille</h2>
+  <ion-list *ngFor="let fm of contactListFamille">
+    <ion-item >
+      <ion-thumbnail slot="start"><img src= "https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.25&pid=1.7"></ion-thumbnail>
+      <ion-label>
+        <h2>{{fm.first_name}} {{fm.last_name}}</h2>
+        <p>{{fm.phone1}}</p>
+        <p>{{fm.phone2}}</p>
+      </ion-label>
+  </ion-item>
+  </ion-list>
+
+  <h2>Autres</h2>
+  <ion-list *ngFor="let autre of contactListAutres">
+    <ion-item >
+      <ion-thumbnail slot="start"><img src= "https://th.bing.com/th/id/OIP.fqSvfYQB0rQ-6EG_oqvonQHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.25&pid=1.7"></ion-thumbnail>
+      <ion-label>
+        <h2>{{autre.first_name}} {{autre.last_name}}</h2>
+        <p>{{autre.phone1}}</p>
+        <p>{{autre.phone2}}</p>
+      </ion-label>
+  </ion-item>
+  </ion-list>
+</ion-content>
